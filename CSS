@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #0890c1, #019dd5);
+  animation: gradientAnimation 10s ease infinite;
+}
+
+
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.player-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.high-score {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.game-wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  background: #18381b8d;
+}
+
+.game-details {
+  color: #e910d3;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.play-board {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #1e283e;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.play-board .food {
+  background: #ff00bb;
+}
+
+.play-board .head {
+  background: #0acd00;
+  border-radius: 50%;
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #f5f6f6;
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #171B26;
+}
+
+@media screen and (max-width: 800px) {
+  .game-wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+
+  .controls {
+    display: flex;
+  }
+
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
